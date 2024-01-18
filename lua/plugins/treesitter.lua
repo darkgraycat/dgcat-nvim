@@ -1,11 +1,12 @@
 return {
   {
-    'nvim-treesitter/nvim-treesitter',
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
     config = function()
-      local treesitter = require('nvim-treesitter.configs')
+      local treesitter = require("nvim-treesitter.configs")
       treesitter.setup({
         sync_install = false,
-        ensure_installed = { 'lua', 'javascript', 'typescript', 'rust' },
+        ensure_installed = { "lua", "javascript", "typescript", "rust" },
         highlight = { enable = true },
         autopairs = { enable = true },
         autotag = { enable = true },

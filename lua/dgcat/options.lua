@@ -1,6 +1,6 @@
 local opt = vim.opt
 
-opt.background = 'dark'
+opt.background = "dark"
 opt.termguicolors = true
 opt.expandtab = true
 opt.tabstop = 2
