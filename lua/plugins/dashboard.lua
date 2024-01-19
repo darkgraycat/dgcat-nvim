@@ -3,21 +3,21 @@ return {
   config = function()
     local dashboard = require("alpha.themes.dashboard")
     dashboard.section.header.val = {
-      [[             ░░░ ░░░           ]],
-      [[            ░▒█░░▒█░           ]],
-      [[           ░▒▓█░░░░░░          ]],
-      [[           ░▒░░▓▓██▓▓░         ]],
-      [[           ░▒▒▓▓▓▓██▓▓░        ]],
-      [[          ░░▒▓▓▓░▓▓▓░▓░        ]],
-      [[         ░▓░▒▒▓▓░▓▓▓░▓░        ]],
-      [[        ░▒░░▒▓▓▓▓██░█▓░        ]],
-      [[        ░▓░░▒▒▓▓▓████▓░        ]],
-      [[         ░▒░░▒▒▒▒▒▒▒▒░         ]],
-      [[──╖      ░▓░░░░░░░░░░       ╓──]],
-      [[□ ║──╖    ░▓▓▓▓▓███░     ╓──║ □]],
-      [[◫ ║□ ║    ░▓▓▓▓▓███░     ║ □║ ◫]],
-      [[□ ║◫ ║──╖ ░▒▓▓▒▒▓█▓░  ╓──║ □║ ◫]],
-      [[◫ ║◫ ║□ ║ ░▒▒░░▒▒░▒░  ║ ◫║ ◫║ □]],
+      [[                       ░░░ ░░░                    ]],
+      [[                      ░▒█░░▒█░                    ]],
+      [[                     ░▒▓█░░░░░░                   ]],
+      [[                     ░▒░░▓▓██▓▓░                  ]],
+      [[                     ░▒▒▓▓▓▓██▓▓░                 ]],
+      [[                    ░░▒▓▓▓░▓▓▓░▓░                 ]],
+      [[                   ░▓░▒▒▓▓░▓▓▓░▓░                 ]],
+      [[                  ░▒░░▒▓▓▓▓██░█▓░                 ]],
+      [[                  ░▓░░▒▒▓▓▓████▓░                 ]],
+      [[                   ░▒░░▒▒▒▒▒▒▒▒░                  ]],
+      [[──╖                ░▓░░░░░░░░░░                ╓──]],
+      [[□ ║──╖              ░▓▓▓▓▓███░              ╓──║ □]],
+      [[◫ ║□ ║              ░▓▓▓▓▓███░              ║ □║ ◫]],
+      [[□ ║◫ ║──╖           ░▒▓▓▒▒▓█▓░           ╓──║ □║ ◫]],
+      [[◫ ║◫ ║□ ║           ░▒▒░░▒▒░▒░           ║ ◫║ ◫║ □]],
     }
     dashboard.section.buttons.val = {
       dashboard.button("f", "󰱼  Find file", ":Telescope find_files <CR>"),
@@ -27,7 +27,12 @@ return {
       dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua<CR>"),
       dashboard.button("q", "󰗼  Quit Neovim", ":qa<CR>"),
     }
-    dashboard.section.footer.val = "Don't Sleep Until You are Proud..."
+    local function vimver()
+      local v = vim.version()
+      return ("v%d.%d.%d"):format(v.major, v.minor, v.patch)
+    end
+
+    dashboard.section.footer.val = " " .. vimver() .. string.rep(" ", 32) .. " " .. os.date("%I:%M %p")
 
     dashboard.section.footer.opts.hl = "Error"
     dashboard.section.header.opts.hl = "Type"

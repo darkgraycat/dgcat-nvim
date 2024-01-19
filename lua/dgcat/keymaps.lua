@@ -2,6 +2,7 @@ local remap = function(mode, key, func, desc)
   vim.keymap.set(mode, key, func, { noremap = true, silent = true, desc = desc })
 end
 
+-- yank to global
 remap("v", "<leader>y", [["+y]])
 -- return to normal mode
 remap("i", "jk", "<ESC>")
