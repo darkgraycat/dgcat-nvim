@@ -14,7 +14,8 @@ remap({"n", "v"}, "<C-k>", "10k")
 -- remap("n", "<C-k>", "<cmd>cnext<CR>zz")
 -- move and reindent the line
 remap("v", "J", ":m '>+1<CR>gv=gv")
-remap("v", "K", ":m '<-1<CR>gv=gv")
+remap("v", "K", ":m '<-2<CR>gv=gv")
 -- remap some common stuff
 remap("i", "<C-c>", "<Esc>")
 remap("n", "Q", "<nop>")
+remap("n", "<C-S-Z>", "<nop>")

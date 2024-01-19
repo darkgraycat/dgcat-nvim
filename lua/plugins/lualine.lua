@@ -10,6 +10,7 @@ return {
       },
       sections = {
         lualine_a = { "mode" },
+        lualine_c = { { "filename", path = 2 } },
         lualine_b = { "branch", "diff", "diagnostics" },
         lualine_x = { "encoding", "fileformat", "filetype" },
         lualine_y = { "progress" },
@@ -17,7 +18,6 @@ return {
       },
       tabline = {
         --lualine_a = { "buffers" },
-        --lualine_c = { { "filename", path = 2 } },
         --lualine_b = { "selectioncount" },
         --lualine_z = { "tabs" },
         --lualine_y = { "datetime" },
