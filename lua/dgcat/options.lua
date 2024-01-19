@@ -6,10 +6,13 @@ local options = {
 	termguicolors = true,
 	swapfile = false,
 	updatetime = 50,
+  showmode = false,
+  showcmd = false,
 
 	guicursor = "",
 	signcolumn = "yes",
-	scrolloff = 8,
+	scrolloff = 12,
+  sidescrolloff = 8,
 
 	tabstop = 2,
 	softtabstop = 2,
