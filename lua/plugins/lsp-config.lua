@@ -29,10 +29,11 @@ return {
 				})
 			end
 
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-			vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
-			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+      local kbmap = require("dgcat.helpers").kbmap
+			kbmap("n", "K", vim.lsp.buf.hover, "Hover doc")
+			kbmap("n", "<leader>gd", vim.lsp.buf.definition, "Go to definition")
+			kbmap("n", "<leader>gr", vim.lsp.buf.references, "Go to references")
+			kbmap({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, "Code action")
 		end,
 	},
 }

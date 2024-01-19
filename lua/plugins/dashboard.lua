@@ -37,6 +37,6 @@ return {
     dashboard.opts.opts.noautocmd = true
     require("alpha").setup(dashboard.opts)
 
-    vim.keymap.set("n", "<leader>A", ":Alpha<CR>")
+    h.kbmap("n", "<leader>A", ":Alpha<CR>", "Open welcome menu")
   end,
 }

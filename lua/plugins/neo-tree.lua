@@ -22,6 +22,7 @@ return {
       window = { position = "left" }
     })
 
-    vim.keymap.set("n", "<C-n>", ":Neotree toggle<CR>")
+    local kbmap = require("dgcat.helpers").kbmap
+    kbmap("n", "<C-n>",":Neotree toggle<CR>" , "Toggle NeoTree")
   end
 }
