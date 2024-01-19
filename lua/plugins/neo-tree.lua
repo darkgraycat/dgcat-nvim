@@ -19,7 +19,7 @@ return {
         content_layout = "center",
         tabs_layout = "equal",
       },
-      window = { position = "left" }
+      window = { position = "right" }
     })
 
     local kbmap = require("dgcat.helpers").kbmap

@@ -6,13 +6,13 @@ local options = {
 	termguicolors = true,
 	swapfile = false,
 	updatetime = 50,
-  showmode = false,
-  showcmd = false,
+	showmode = false,
+	showcmd = false,
 
 	guicursor = "",
 	signcolumn = "yes",
 	scrolloff = 12,
-  sidescrolloff = 8,
+	sidescrolloff = 8,
 
 	tabstop = 2,
 	softtabstop = 2,
@@ -47,13 +47,7 @@ for option, value in pairs(options) do
 end
 
 -- setup diagnostic signs
-local diagnostic_signs = {
-	Error = "",
-	Warn = "",
-	Hint = "",
-	Info = "",
-}
-for type, icon in pairs(diagnostic_signs) do
-	local hl = "DiagnosticSign" .. type
-	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-end
+vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
+vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
+vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
+vim.fn.sign_define("DiagnosticSignHint", { text = "󰌵", texthl = "DiagnosticSignHint" })

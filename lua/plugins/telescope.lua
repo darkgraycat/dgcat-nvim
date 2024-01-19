@@ -10,6 +10,7 @@ return {
       kbmap("n", "<leader>ff", builtin.find_files, "Find files")
       kbmap("n", "<leader>fg", builtin.live_grep, "File grep")
       kbmap("n", "<leader>fb", builtin.buffers, "Opened buffers")
+      kbmap("n", "<leader>de", builtin.diagnostics, "Diagnostics errors")
     end
   },
   {

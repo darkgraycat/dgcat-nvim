@@ -2,5 +2,18 @@ require("dgcat.options")
 require("dgcat.keymaps")
 require("dgcat.lazy")
 
--- vim.cmd.colorscheme("kanagawa-wave")
-vim.cmd.colorscheme("horizon")
+-- setup colors
+local colors = {
+  "horizon",
+  "kanagawa-wave",
+  "kanagawa-dragon",
+  "kanagawa-lotus",
+  "rose-pine-main",
+  "rose-pine-moon",
+  "rose-pine-dawn",
+  "catppuccin-mocha",
+  "catppuccin-macchiato",
+  "catppuccin-frappe",
+  "catppuccin-latte",
+}
+vim.cmd.colorscheme(colors[9])

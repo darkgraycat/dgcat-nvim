@@ -28,7 +28,7 @@ return {
       dashboard.button("q", "󰗼  Quit Neovim", ":qa<CR>"),
     }
     local h = require("dgcat.helpers")
-    dashboard.section.footer.val = " " .. h.vimver() .. h.lpad(os.date("%A  %I:%M %p"), 44)
+    dashboard.section.footer.val = " " .. h.vimver() .. h.lpad(tostring(os.date("%A  %I:%M %p")), 44)
 
     dashboard.section.footer.opts.hl = "Error"
     dashboard.section.header.opts.hl = "Type"
