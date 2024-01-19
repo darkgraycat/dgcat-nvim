@@ -1,7 +1,5 @@
 return {
-  {
-    "hrsh7th/cmp-nvim-lsp"
-  },
+  { "hrsh7th/cmp-nvim-lsp" },
 	{
 		"L3MON4D3/LuaSnip",
 		dependencies = {
@@ -21,8 +19,8 @@ return {
 					end,
 				},
 				window = {
-					completion = cmp.config.window.bordered(),
-					documentation = cmp.config.window.bordered(),
+					-- completion = cmp.config.window.bordered(),
+					-- documentation = cmp.config.window.bordered(),
 				},
 				mapping = cmp.mapping.preset.insert({
 					["<C-b>"] = cmp.mapping.scroll_docs(-4),

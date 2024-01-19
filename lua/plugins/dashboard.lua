@@ -27,9 +27,9 @@ return {
       dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua<CR>"),
       dashboard.button("q", "󰗼  Quit Neovim", ":qa<CR>"),
     }
-    dashboard.section.footer.val = "Don't Stop Until You are Proud..."
+    dashboard.section.footer.val = "Don't Sleep Until You are Proud..."
 
-    dashboard.section.footer.opts.hl = "Include"
+    dashboard.section.footer.opts.hl = "Error"
     dashboard.section.header.opts.hl = "Type"
     dashboard.section.buttons.opts.hl = "Keyword"
 
