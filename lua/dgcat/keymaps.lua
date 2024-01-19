@@ -1,15 +1,14 @@
 local remap = function(mode, key, func, desc)
-  vim.keymap.set(mode, key, func, { noremap = true, silent = true, desc = desc })
+	vim.keymap.set(mode, key, func, { noremap = true, silent = true, desc = desc })
 end
 
 -- yank to global
 remap("v", "<leader>y", [["+y]])
 -- return to normal mode
-remap("i", "jk", "<ESC>")
-remap("c", "jk", "<CR>:nohl<CR>")
+remap({ "i", "c" }, "jk", "<ESC>")
 -- buffer navigation
-remap({"n", "v"}, "<C-j>", "10j")
-remap({"n", "v"}, "<C-k>", "10k")
+remap({ "n", "v" }, "<C-j>", "10j")
+remap({ "n", "v" }, "<C-k>", "10k")
 -- list navigation
 -- remap("n", "<C-j>", "<cmd>cnext<CR>zz")
 -- remap("n", "<C-k>", "<cmd>cnext<CR>zz")
