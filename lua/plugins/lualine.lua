@@ -16,11 +16,11 @@ return {
         lualine_z = { "location" }
       },
       tabline = {
-        lualine_a = { "buffers" },
-        lualine_c = { { "filename", path = 2 } },
-        lualine_b = { "selectioncount" },
-        lualine_z = { "tabs" },
-        lualine_y = { "datetime" },
+        --lualine_a = { "buffers" },
+        --lualine_c = { { "filename", path = 2 } },
+        --lualine_b = { "selectioncount" },
+        --lualine_z = { "tabs" },
+        --lualine_y = { "datetime" },
       }
     })
   end
