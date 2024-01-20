@@ -16,4 +16,4 @@ local colors = {
   "catppuccin-frappe",
   "catppuccin-latte",
 }
-vim.cmd.colorscheme(colors[9])
+vim.cmd.colorscheme(colors[1])
