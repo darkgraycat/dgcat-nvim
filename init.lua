@@ -1,19 +1,18 @@
 require("dgcat.options")
 require("dgcat.keymaps")
 require("dgcat.lazy")
+require("dgcat.colours")
 
--- setup colors
-local colors = {
-  "horizon",
-  "kanagawa-wave",
-  "kanagawa-dragon",
-  "kanagawa-lotus",
-  "rose-pine-main",
-  "rose-pine-moon",
-  "rose-pine-dawn",
-  "catppuccin-mocha",
-  "catppuccin-macchiato",
-  "catppuccin-frappe",
-  "catppuccin-latte",
-}
-vim.cmd.colorscheme(colors[1])
+--[[
+--Must have plugins to install:
+--pair-brackets colorize
+--git blame (fugitive)
+--folding
+--
+--Good to have:
+--comments
+--
+--Make it nice:
+--notifications
+--colorbuddy
+--]]--

@@ -8,8 +8,11 @@ local options = {
 	updatetime = 50,
 	showmode = false,
 	showcmd = false,
+  completeopt = 'menu,menuone,noselect',
+  splitright = true,
+  splitbelow = true,
 
-	guicursor = "",
+	guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20",
 	signcolumn = "yes",
 	scrolloff = 12,
 	sidescrolloff = 8,

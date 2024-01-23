@@ -7,6 +7,8 @@ return {
     "MunifTanjim/nui.nvim",
   },
   config = function()
+    local default_component_configs = {
+    }
     require("neo-tree").setup({
       close_if_last_window = true,
       enable_git_status = true,
@@ -19,10 +21,11 @@ return {
         content_layout = "center",
         tabs_layout = "equal",
       },
-      window = { position = "right" }
+      popup_border_style = "single",
+      default_component_configs,
     })
 
     local kbmap = require("dgcat.helpers").kbmap
-    kbmap("n", "<C-n>",":Neotree toggle<CR>" , "Toggle NeoTree")
+    kbmap("n", "<C-n>",":Neotree position=left toggle<CR>" , "Toggle NeoTree")
   end
 }
