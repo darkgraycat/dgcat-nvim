@@ -59,11 +59,13 @@ local dashboard_headers = {
 return {
   "goolord/alpha-nvim",
   config = function()
-    local h = require("dgcat.helpers")
+    local kbmap = require("dgcat.helpers").kbmap
+    local lpad = require("dgcat.helpers").lpad
+    local rpad = require("dgcat.helpers").rpad
     local dashboard = require("alpha.themes.dashboard")
 
     -- keymap
-    h.kbmap("n", "<leader>A", ":Alpha<CR>", "Open welcome menu")
+    kbmap("n", "<leader>A", ":Alpha<CR>", "Open welcome menu")
 
     -- highlights
     dashboard.section.footer.opts.hl = "Error"
@@ -91,7 +93,7 @@ return {
         local ms = math.floor(stats.startuptime * 100) / 100
         local time = tostring(os.date("%A 󱑁 %I:%M %p"))
         local plugins = "󰚥 " .. stats.loaded .. "/" .. stats.count .. " in " .. ms .. " ms"
-        dashboard.section.footer.val = h.rpad(plugins, 28) .. h.lpad(time, 28)
+        dashboard.section.footer.val = rpad(plugins, 28) .. lpad(time, 28)
         pcall(vim.cmd.AlphaRedraw)
       end,
     })

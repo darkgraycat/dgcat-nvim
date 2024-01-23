@@ -14,10 +14,10 @@ return {
       enable_git_status = true,
       enable_diagnostics = true,
       sort_case_insensitive = true,
-      sources = { "filesystem", "buffers", "git_status" },
+      sources = { "filesystem", "buffers", "git_status", "document_symbols" },
       source_selector = {
         winbar = true,
-        statusline = false,
+        statusline = true,
         content_layout = "center",
         tabs_layout = "equal",
       },
@@ -27,5 +27,6 @@ return {
 
     local kbmap = require("dgcat.helpers").kbmap
     kbmap("n", "<C-n>",":Neotree position=left toggle<CR>" , "Toggle NeoTree")
+    kbmap("n", "<C-m>",":Neotree position=right document_symbols toggle<CR>" , "Toggle NeoTree")
   end
 }
