@@ -22,6 +22,8 @@ local colours = {
 	"material-oceanic",
 	"material-palenight",
 	"material-deep ocean",
+  "dracula",
+  "dracula-soft"
 }
 
-vim.cmd.colorscheme(colours[1] or "habamax")
+vim.cmd.colorscheme(colours[7] or "habamax")

@@ -4,7 +4,6 @@ vim.g.mapleader = " "
 local options = {
   backspace = "indent,eol,start",
   autowrite = true,
-  cursorline = true,
 
   background = "dark",
   termguicolors = true,

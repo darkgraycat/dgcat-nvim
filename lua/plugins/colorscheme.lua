@@ -6,4 +6,6 @@ return {
 	{ "loctvl842/monokai-pro.nvim",      name = "monokai" },
 	{ "shaunsingh/moonlight.nvim",       name = "moonlight" },
 	{ "marko-cerovac/material.nvim",     name = "material" },
+  { "doums/darcula",                   name = "darcula" },
+  { "Mofiqul/dracula.nvim",            name = "dracula" }
 }
