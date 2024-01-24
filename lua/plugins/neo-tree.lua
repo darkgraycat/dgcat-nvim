@@ -26,7 +26,7 @@ return {
     })
 
     local kbmap = require("dgcat.helpers").kbmap
-    kbmap("n", "<C-n>",":Neotree position=left toggle<CR>" , "Toggle NeoTree")
-    kbmap("n", "<C-m>",":Neotree position=right document_symbols toggle<CR>" , "Toggle NeoTree")
+    kbmap("n", "<C-n>",":Neotree position=left action=focus toggle reveal_force_cwd filesystem<CR>" , "Toggle NeoTree")
+    kbmap("n", "<C-m>",":Neotree position=right action=show toggle reveal_force_cwd selector=false document_symbols<CR>" , "Toggle NeoTree")
   end
 }
