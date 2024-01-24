@@ -1,5 +1,6 @@
 return {
   "robitx/gp.nvim",
+  lazy = true,
   event = "VeryLazy",
 	config = function()
 		require("gp").setup({

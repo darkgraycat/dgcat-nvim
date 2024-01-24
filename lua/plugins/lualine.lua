@@ -6,7 +6,9 @@ return {
       options = {
         theme = "auto",
         icons_enabled = true,
-        padding = 2
+        component_separators = { left = "󰇝", right = "󰇝" },
+        section_separators = { left = "", right = "" },
+        padding = 2,
       },
       sections = {
         lualine_a = { "mode" },
@@ -14,14 +16,14 @@ return {
         lualine_b = { "branch", "diff", "diagnostics" },
         lualine_x = { "encoding", "fileformat", "filetype" },
         lualine_y = { "progress" },
-        lualine_z = { "location" }
+        lualine_z = { "location" },
       },
       tabline = {
         --lualine_a = { "buffers" },
         --lualine_b = { "selectioncount" },
         --lualine_z = { "tabs" },
         --lualine_y = { "datetime" },
-      }
+      },
     })
-  end
+  end,
 }

@@ -82,7 +82,7 @@ return {
 			dashboard.button("t", "󰷊   Find text", ":Telescope live_grep <CR>"),
 			dashboard.button("e", "   Explorer", ":Neotree position=float reveal<CR>"),
 			dashboard.button("s", "   Settings", ":e ~/.config/nvim/init.lua<CR>"),
-			dashboard.button("q", "   Quit", ":qa<CR>"),
+			dashboard.button("q", "󰄛   Quit", ":qa<CR>"),
 		}
 
 		-- footer

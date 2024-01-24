@@ -27,7 +27,9 @@ return {
 		config = function()
 			require("ibl").setup({
 				debounce = 100,
-				indent = { char = "." },
+				indent = {
+          char = "."
+        },
 				scope = {
 					enabled = true,
 					highlight = { "Function", "Label" },
