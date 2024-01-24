@@ -1,5 +1,3 @@
-local kbmap = require("dgcat.helpers").kbmap
-
 return {
 	{ "folke/which-key.nvim" },
 	{
@@ -17,8 +15,10 @@ return {
 					return { "treesitter", "indent" }
 				end,
 			})
-      kbmap('n', 'zR', require('ufo').openAllFolds)
-      kbmap('n', 'zM', require('ufo').closeAllFolds)
+			require("dgcat.helpers").keymap(
+				{ "n", "zR", require("ufo").openAllFolds },
+				{ "n", "zM", require("ufo").closeAllFolds }
+			)
 		end,
 	},
 	{

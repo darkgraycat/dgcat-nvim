@@ -6,7 +6,6 @@ return {
 		config = function()
 			local telescope = require("telescope")
 			local builtin = require("telescope.builtin")
-			local kbmap = require("dgcat.helpers").kbmap
 			telescope.setup({
 				defaults = {
 					wrap_results = true,
@@ -25,15 +24,17 @@ return {
 					["buffers"] = { sort_mru = true, ignore_current_buffer = true },
 				},
 			})
-			kbmap("n", "<C-p>", builtin.find_files, "Find files")
-			kbmap("n", "<leader>ff", builtin.find_files, "Find files")
-			kbmap("n", "<leader>fg", builtin.live_grep, "File grep")
-			kbmap("n", "<leader>fb", builtin.buffers, "Opened buffers")
-			kbmap("n", "<leader>de", builtin.diagnostics, "Show diagnostics")
-			kbmap("n", "<leader>fG", builtin.git_status, "Git status")
-			kbmap("n", "<leader>fT", builtin.treesitter, "List treesitter")
-      kbmap("n", "<leader>fd", builtin.lsp_definitions, "Show definitions")
-      kbmap("n", "<leader>fr", builtin.lsp_references, "Show references")
+			require("dgcat.helpers").keymap(
+				{ "n", "<C-p>", builtin.find_files, "Find files" },
+				{ "n", "<leader>ff", builtin.find_files, "Find files" },
+				{ "n", "<leader>fg", builtin.live_grep, "File grep" },
+				{ "n", "<leader>fb", builtin.buffers, "Opened buffers" },
+				{ "n", "<leader>de", builtin.diagnostics, "Show diagnostics" },
+				{ "n", "<leader>fG", builtin.git_status, "Git status" },
+				{ "n", "<leader>fT", builtin.treesitter, "List treesitter" },
+				{ "n", "<leader>fd", builtin.lsp_definitions, "Show definitions" },
+				{ "n", "<leader>fr", builtin.lsp_references, "Show references" }
+			)
 		end,
 	},
 	{

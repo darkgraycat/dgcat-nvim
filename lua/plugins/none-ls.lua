@@ -6,14 +6,13 @@ return {
 			sources = {
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.prettier,
-        null_ls.builtins.code_actions.eslint_d,
-        -- null_ls.builtins.diagnostics.eslint_d,
-        null_ls.builtins.code_actions.ltrs,
-        null_ls.builtins.diagnostics.ltrs,
+				null_ls.builtins.code_actions.eslint_d,
+				-- null_ls.builtins.diagnostics.eslint_d,
+				null_ls.builtins.code_actions.ltrs,
+				null_ls.builtins.diagnostics.ltrs,
 			},
 		})
 
-    local kbmap = require("dgcat.helpers").kbmap
-    kbmap("n", "<leader>gf", vim.lsp.buf.format, "Format buffer")
+		require("dgcat.helpers").keymap({ "n", "<leader>gf", vim.lsp.buf.format, "Format buffer" })
 	end,
 }
