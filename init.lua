@@ -14,5 +14,12 @@ require("dgcat.colours")
 --Make it nice:
 --colorbuddy
 --]]
---
---
+
+
+--[[
+plugins where block separators:
+barbar, lualine
+
+
+
+--]]

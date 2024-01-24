@@ -17,13 +17,12 @@ local colours = {
 	"monokai-pro-octagon",
 	"monokai-pro-spectrum",
 	"monokai-pro-ristretto",
-	"material-darker",
-	"material-lighter",
-	"material-oceanic",
-	"material-palenight",
-	"material-deep ocean",
   "dracula",
-  "dracula-soft"
+  "dracula-soft",
+  "tokyonight-day",
+  "tokyonight-moon",
+  "tokyonight-night",
+  "tokyonight-storm"
 }
 
-vim.cmd.colorscheme(colours[7] or "habamax")
+vim.cmd.colorscheme(colours[16] or "habamax")

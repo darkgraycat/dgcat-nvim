@@ -34,6 +34,7 @@ return {
 					enabled = true,
 					highlight = { "Function", "Label" },
 					show_start = true,
+          show_end = true,
 					show_exact_scope = true,
 					char = "▏",
 				},

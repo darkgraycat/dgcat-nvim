@@ -32,8 +32,8 @@ return {
 				{ "n", "<leader>de", builtin.diagnostics, "Show diagnostics" },
 				{ "n", "<leader>fG", builtin.git_status, "Git status" },
 				{ "n", "<leader>fT", builtin.treesitter, "List treesitter" },
-				{ "n", "<leader>fd", builtin.lsp_definitions, "Show definitions" },
-				{ "n", "<leader>fr", builtin.lsp_references, "Show references" }
+				{ "n", "<leader>gd", builtin.lsp_definitions, "Show definitions" },
+				{ "n", "<leader>gr", builtin.lsp_references, "Show references" }
 			)
 		end,
 	},
