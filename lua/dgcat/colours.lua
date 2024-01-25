@@ -25,4 +25,4 @@ local colours = {
   "tokyonight-storm"
 }
 
-vim.cmd.colorscheme(colours[24] or "habamax")
+vim.cmd.colorscheme(colours[23] or "habamax")
