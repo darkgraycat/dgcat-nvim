@@ -8,20 +8,17 @@ return {
 			local builtin = require("telescope.builtin")
 			telescope.setup({
 				defaults = {
-					wrap_results = true,
+					wrap_results = false,
 					path_display = { "smart" },
 					file_ignore_patterns = { "node_modules/.*", "build/.*", "dist/.*" },
 				},
 				pickers = {
-					["lsp_references"] = { wrap_results = false, path_display = { "short" }, jump_type = "never" },
-					["lsp_definitions"] = { wrap_results = false, path_display = { "short" }, jump_type = "never" },
-					["diagnostics"] = {
-						wrap_results = true,
-						path_display = { "hidden" },
-						layout_strategy = "horizontal",
-					},
-					["find_files"] = { wrap_results = true },
-					["buffers"] = { sort_mru = true, ignore_current_buffer = true },
+					diagnostics = { wrap_results = true, path_display = { "hidden" }, layout_strategy = "horizontal" },
+					buffers = { sort_mru = true, ignore_current_buffer = true },
+          -- LSP
+					lsp_references = { path_display = { "short" }, jump_type = "never", theme = "cursor" },
+					lsp_definitions = {  path_display = { "short" }, jump_type = "never", theme = "cursor" },
+          lsp_document_symbols = { path_display = { "short" }, theme = "dropdown" }
 				},
 			})
 			require("dgcat.helpers").keymap(
@@ -30,10 +27,17 @@ return {
 				{ "n", "<leader>fg", builtin.live_grep, "File grep" },
 				{ "n", "<leader>fb", builtin.buffers, "Opened buffers" },
 				{ "n", "<leader>de", builtin.diagnostics, "Show diagnostics" },
-				{ "n", "<leader>fG", builtin.git_status, "Git status" },
-				{ "n", "<leader>fT", builtin.treesitter, "List treesitter" },
-				{ "n", "<leader>gd", builtin.lsp_definitions, "Show definitions" },
-				{ "n", "<leader>gr", builtin.lsp_references, "Show references" }
+
+				{ "n", "<leader>fGs", builtin.git_status, "Git status" },
+				{ "n", "<leader>fGc", builtin.git_stash, "Git stash" },
+				{ "n", "<leader>fGc", builtin.git_commits, "Git commits" },
+				{ "n", "<leader>fGd", builtin.git_bcommits, "Git current diff" },
+				{ "n", "<leader>fGb", builtin.git_branches, "Git branches" },
+
+				{ "n", "<leader>fd", builtin.lsp_definitions, "LSP definitions" },
+				{ "n", "<leader>fr", builtin.lsp_references, "LSP references" },
+				{ "n", "<leader>fs", builtin.lsp_document_symbols, "LSP symbols" }
+
 			)
 		end,
 	},

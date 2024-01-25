@@ -7,13 +7,13 @@ return {
     "MunifTanjim/nui.nvim",
   },
   config = function()
-    local default_component_configs = {
-    }
     require("neo-tree").setup({
       close_if_last_window = true,
+      popup_border_style = "rounded",
       enable_git_status = true,
       enable_diagnostics = true,
       sort_case_insensitive = true,
+      open_files_do_not_replace_types = { "terminal", "telescope", "trouble", "qf" },
       sources = { "filesystem", "buffers", "git_status", "document_symbols" },
       source_selector = {
         winbar = true,
@@ -21,8 +21,11 @@ return {
         content_layout = "center",
         tabs_layout = "equal",
       },
-      popup_border_style = "single",
-      default_component_configs,
+      window = {
+        mappings = {
+          ["<space>"] = { "toggle_node", nowait = true }
+        }
+      }
     })
 
     require("dgcat.helpers").keymap(

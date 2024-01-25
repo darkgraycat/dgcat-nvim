@@ -19,14 +19,3 @@ require("dgcat.helpers").keymap(
 	{ { "n", "v", "i" }, "<C-Z>", "<Esc>" },
 	{ { "n", "v", "i" }, "<C-z>", "<Esc>" }
 )
-
-local prt = function()
-  local mode = vim.api.nvim_get_mode()
-  for _, m in ipairs(mode) do
-    print("mode" .. m)
-  end
-end
-
-require("dgcat.helpers").keymap({
-  {"n", "v", "x", "c" }, "<A-a>", prt
-})
