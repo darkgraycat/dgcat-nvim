@@ -6,6 +6,14 @@ return {
 		config = function()
 			local telescope = require("telescope")
 			local builtin = require("telescope.builtin")
+			local picker_setup_cursor = { path_display = { "short" }, theme = "cursor", jump_type = "never" }
+      local picker_setup_dropdown = { path_display = { "short"}, theme = "dropdown" }
+      local picker_setup_wrap_hor = { wrap_results = true, path_display = { "hidden" }, layout_strategy = "horizontal" }
+      local picker_setup_vert = { layout_strategy = "vertical" }
+      -- TODO: use vertical layout for diagnostics
+      -- TODO: try different ways
+      -- TODO: try to use ivy to make a sidebar
+      --local picker_setup_ivy = { layout_strategy = "vertical", theme = "ivy" }
 			telescope.setup({
 				defaults = {
 					wrap_results = false,
@@ -13,12 +21,21 @@ return {
 					file_ignore_patterns = { "node_modules/.*", "build/.*", "dist/.*" },
 				},
 				pickers = {
-					diagnostics = { wrap_results = true, path_display = { "hidden" }, layout_strategy = "horizontal" },
-					buffers = { sort_mru = true, ignore_current_buffer = true },
-          -- LSP
-					lsp_references = { path_display = { "short" }, jump_type = "never", theme = "cursor" },
-					lsp_definitions = {  path_display = { "short" }, jump_type = "never", theme = "cursor" },
-          lsp_document_symbols = { path_display = { "short" }, theme = "dropdown" }
+          -- files
+          --live_grep = ,
+					-- lsp
+					lsp_references = picker_setup_cursor,
+					lsp_definitions = picker_setup_cursor,
+					lsp_document_symbols = picker_setup_dropdown,
+          -- git
+				  git_status = picker_setup_vert,
+				  git_stash = picker_setup_vert,
+				  git_commits = picker_setup_vert,
+				  git_bcommits = picker_setup_vert,
+				  git_branches = picker_setup_vert,
+          -- other
+					diagnostics = picker_setup_wrap_hor,
+          buffers = { sort_mru = true, ignore_current_buffer = true },
 				},
 			})
 			require("dgcat.helpers").keymap(
@@ -37,7 +54,6 @@ return {
 				{ "n", "<leader>fd", builtin.lsp_definitions, "LSP definitions" },
 				{ "n", "<leader>fr", builtin.lsp_references, "LSP references" },
 				{ "n", "<leader>fs", builtin.lsp_document_symbols, "LSP symbols" }
-
 			)
 		end,
 	},

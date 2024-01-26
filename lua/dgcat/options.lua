@@ -1,4 +1,7 @@
+-- globals
 vim.g.mapleader = " "
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- setup options
 local options = {
@@ -43,6 +46,7 @@ local options = {
   foldmethod = "indent",
   fillchars = [[eob: ,fold: ,foldopen:▼,foldsep: ,foldclose:⏵]],
 }
+
 for option, value in pairs(options) do
   local exists = vim.fn.exists("+" .. option) == 1
   if exists then
